@@ -1,0 +1,8 @@
+{
+    "game_title": "The Forgotten Realms",
+    "prompt_language_select": "Choose your language:\n1. English\n2. Spanish\n3. Russian",
+    "prompt_race_select": "Choose your race:\n1. Elf\n2. Dwarf\n3. ???",
+    "welcome_message_elf": "Welcome, noble Elf! Your adventure begins...",
+    "welcome_message_dwarf": "Greetings, mighty Dwarf! Ready for battle?",
+    "welcome_message_human": "Hello, Human. The world awaits you."
+}

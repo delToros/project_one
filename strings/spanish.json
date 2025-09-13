@@ -1,0 +1,8 @@
+{
+    "game_title": "Los Reinos Olvidados",
+    "prompt_language_select": "Elige tu idioma:\n1. Inglés\n2. Español",
+    "prompt_race_select": "Elige tu raza:\n1. Elfo\n2. Enano\n3. Humano",
+    "welcome_message_elf": "¡Bienvenido, noble Elfo! Tu aventura comienza...",
+    "welcome_message_dwarf": "Saludos, poderoso Enano. ¿Listo para la batalla?",
+    "welcome_message_human": "Hola, Humano. El mundo te espera."
+}
