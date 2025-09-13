@@ -1,0 +1,44 @@
+{
+  "game_title": "Les Royaumes Oubliés",
+  "prompt_language_select": "Choisissez votre langue :\n1. English\n2. Spanish\n3. Russian",
+  "prompt_race_select": "Choisissez votre race :\n1. Elfe\n2. Nain\n3. ???",
+  "game_states": {
+    "t_e_000": {
+      "message": "L'odeur dégoûtante du vin bon marché et du vomi vous réveille brutalement. Vous n'avez aucun souvenir de qui vous êtes, où vous êtes, ou de quel jour il est.\n\nVos yeux s'ouvrent sur une vision macabre : un repas à moitié mangé, des papiers éparpillés et un petit sac en cuir posés devant vous.\n\n\n1. Vous avez la nausée et vomissez à la vue de la nourriture pourrie.\n2. Vous inspectez le petit sac en cuir.\n3. Vous examinez les papiers éparpillés.\n4. Vous regardez autour de vous, vous demandant quel crime cosmique vous avez commis pour mériter cela.",
+      "choices": {
+        "1": "pass",
+        "2": "pass",
+        "3": "pass"
+      }
+    },
+    "t_d_000": {
+      "message": "L'odeur écœurante et sucrée de la nourriture de la veille et de la bière éventée vous tire de votre rêve où vous commandiez un navire d'os, naviguant sur une mer de sang de vos ennemis.\n\nVous fixez un morceau de viande infesté de mouches, à l'apparence vraiment invitante, quand une pensée vous frappe : vous n'avez aucun souvenir de qui vous êtes, où vous êtes, ou de qui sont vos glorieux ennemis.\n\n\n1. Bah, ça doit être cette salade infecte que vous avez mangée il y a un mois. Rien qu'un bon steak ne puisse arranger.\n2. Fouillez vos poches pour trouver quelque chose qui pourrait vous identifier, comme un passeport.\n3. Vous avez besoin d'un verre. Un fort. Commandez un vin muté.",
+      "choices": {
+        "1": "t_d_001",
+        "2": "t_d_002",
+        "3": "pass"
+      }
+    },
+    "t_d_001": {
+      "message": "Vous dévorez la viande, avec les frites, les mouches et un morceau de serviette. Ou était-ce un dépliant ? Peu importe, votre estomac s'en occupera.\n\nAlors que vous finissez la dernière bouchée, une pensée soudaine vous frappe : avez-vous seulement de l'argent pour payer tout ça ? Vous pourriez toujours commencer un combat et laisser vos poings décider du prix final. Ou bien, vous pourriez fouiller vos poches pour trouver quelque chose de précieux.\n\n\n1. Fouiller vos poches.\n\n2. Chercher la bagarre.\n\n3. Vous asseoir en silence et vous demander pourquoi avoir deux pensées aussi étranges d'affilée vous semble si... faux. Y a-t-il quelque chose qui cloche avec votre cervelle ?",
+      "choices": {
+        "1": "pass",
+        "2": "pass",
+        "3": "pass"
+      },
+      "t_d_001": {
+        "message": "Vous balayez rapidement la table et vos environs du regard avant de fouiller dans les nombreuses poches de vos vêtements de voyage usés.\n\nSur votre assiette, à moitié immergé dans le jus de viande figé, vous repérez un dépliant de gestion de la colère. Puis, dans vos poches, vous trouvez un passeport et une bague… toujours attachée à un doigt humain sectionné. D'après son apparence, quelqu'un l'a arraché avec ses dents.\n\n\nUn petit rire grave s'échappe de votre gorge.\n\n\n1. 'Eh bien, ce pauvre bougre ne pourra plus fourrer ce doigt dans les yeux de personne.'\n\n2. Lire le dépliant.\n\n3. Ouvrir le passeport.\n\n4. Examiner la bague et le doigt macabre sur lequel elle se trouve.",
+        "choices": {
+          "1": "pass",
+          "2": "pass",
+          "3": "pass"
+        }
+      }
+    }
+  },
+  "start_states": {
+        "elf": "t_e_000",
+        "dwarf": "t_d_000",
+        "human": "t_h_000"
+    }
+}

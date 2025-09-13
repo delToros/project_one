@@ -4,7 +4,7 @@
   "prompt_race_select": "Choose your race:\n1. Elf\n2. Dwarf\n3. ???",
   "game_states": {
     "t_e_000": {
-      "message": "The disgusting smell of cheap wine and vomit jolts you awake. You have no memory of who you are, where you are, or what day it is.\nYour eyes open to a grisly sight: a half-eaten meal, scattered papers, and a small leather sack lying before you.\n1. - You gag and vomit from the stench of the rotten food.\n2. - You inspect the small leather sack.\n3. - You scan the scattered papers.\n4. - You look around, wondering what cosmic crime you committed to deserve this.",
+      "message": "The disgusting smell of cheap wine and vomit jolts you awake. You have no memory of who you are, where you are, or what day it is.\n\nYour eyes open to a grisly sight: a half-eaten meal, scattered papers, and a small leather sack lying before you.\n\n\n1. You gag and vomit from the stench of the rotten food.\n2. You inspect the small leather sack.\n3. You scan the scattered papers.\n4. You look around, wondering what cosmic crime you committed to deserve this.",
       "choices": {
         "1": "pass",
         "2": "pass",
@@ -12,7 +12,7 @@
       }
     },
     "t_d_000": {
-      "message": "The sickeningly sweet smell of day-old food and stale beer rouses you from a dream of commanding a ship of bones, sailing a sea of your enemies' blood.\n\nYou're staring at a truly inviting piece of fly-ridden meat when it hits you: you have no memory of who you are, where you are, or who your glorious enemies might be.\n\n\"Bah, must be that wicked salad from a month ago. Nothing a good steak won't fix.\"\n\nCheck your pockets for anything that might identify you, like a passport.\n\nYou need a drink. A strong one. Order a fortified wine.",
+      "message": "The sickeningly sweet smell of day-old food and stale beer rouses you from a dream of commanding a ship of bones, sailing a sea of your enemies' blood.\n\nYou're staring at a truly inviting piece of fly-ridden meat when it hits you: you have no memory of who you are, where you are, or who your glorious enemies might be.\n\n\n1. Bah, must be that wicked salad from a month ago. Nothing a good steak won't fix.\n2. Check your pockets for anything that might identify you, like a passport.\n3. You need a drink. A strong one. Order a fortified wine.",
       "choices": {
         "1": "t_d_001",
         "2": "t_d_002",
@@ -20,14 +20,14 @@
       }
     },
     "t_d_001": {
-      "message": "You devour the meat, along with the fries, the flies, and a piece of napkin. Or was that a pamphlet? Doesn't matter now; your gut will sort it out.\n\nAs you finish the last bite, a rogue thought hits you: Do you even have the coin to pay for this? You could always start a fight and let your fists decide the final price. Or, you could check your pockets for something valuable.\n\nCheck your pockets.\n\nPick a fight.\n\nSit and contemplate why having two wild thoughts in a row feels so... wrong. Is there something amiss with your noggin?",
+      "message": "You devour the meat, along with the fries, the flies, and a piece of napkin. Or was that a pamphlet? Doesn't matter now; your gut will sort it out.\n\nAs you finish the last bite, a rogue thought hits you: Do you even have the coin to pay for this? You could always start a fight and let your fists decide the final price. Or, you could check your pockets for something valuable.\n\n\n1. Check your pockets.\n\n2. Pick a fight.\n\n3. Sit and contemplate why having two wild thoughts in a row feels so... wrong. Is there something amiss with your noggin?",
       "choices": {
         "1": "pass",
         "2": "pass",
         "3": "pass"
       },
       "t_d_001": {
-        "message": "You quickly scan the table and your surroundings before rummaging through the numerous pockets of your travel-worn clothes.\n\nOn your plate, half-sunk in congealed meat juices, you spot an anger management pamphlet. Then, in your pockets, you find a passport and a ring... still attached to a severed human finger. By the looks of it, someone bit it right off.\n\nA low chuckle escapes your throat. \"Well, that poor bastard won't be poking anyone's eyes out with this anymore.\"\n\nRead the pamphlet.\n\nOpen the passport.\n\nExamine the ring and the gruesome finger it's on.",
+        "message": "You quickly scan the table and your surroundings before rummaging through the numerous pockets of your travel-worn clothes.\n\nOn your plate, half-sunk in congealed meat juices, you spot an anger management pamphlet. Then, in your pockets, you find a passport and a ring... still attached to a severed human finger. By the looks of it, someone bit it right off.\n\n\nA low chuckle escapes your throat.\n\n\n1. 'Well, that poor bastard won't be poking anyone's eyes out with this anymore.'\n\n2. Read the pamphlet.\n\n3. Open the passport.\n\n4. Examine the ring and the gruesome finger it's on.",
         "choices": {
           "1": "pass",
           "2": "pass",

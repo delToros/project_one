@@ -1,0 +1,44 @@
+{
+  "game_title": "Die Vergessenen Reiche",
+  "prompt_language_select": "Wählen Sie Ihre Sprache:\n1. English\n2. Spanish\n3. Russian",
+  "prompt_race_select": "Wählen Sie Ihre Rasse:\n1. Elf\n2. Zwerg\n3. ???",
+  "game_states": {
+    "t_e_000": {
+      "message": "Der widerliche Geruch von billigem Wein und Erbrochenem reißt Sie aus dem Schlaf. Sie haben keine Erinnerung daran, wer Sie sind, wo Sie sind oder welcher Tag heute ist.\n\nIhre Augen öffnen sich zu einem grauenhaften Anblick: Eine halb aufgegessene Mahlzeit, verstreute Papiere und ein kleiner Ledersack liegen vor Ihnen.\n\n\n1. Ihnen wird übel und Sie übergeben sich beim Anblick der verdorbenen Speisen.\n2. Sie inspizieren den kleinen Ledersack.\n3. Sie mustern die verstreuten Papiere.\n4. Sie sehen sich um und fragen sich, welches kosmische Verbrechen Sie begangen haben, um dies zu verdienen.",
+      "choices": {
+        "1": "pass",
+        "2": "pass",
+        "3": "pass"
+      }
+    },
+    "t_d_000": {
+      "message": "Der widerlich süße Geruch von altem Essen und abgestandenem Bier reißt Sie aus einem Traum, in dem Sie ein Schiff aus Knochen befehligen und auf einem Meer aus dem Blut Ihrer Feinde segeln.\n\nSie starren auf ein wahrhaft einladendes Stück fliegenübersäter Fleisch, als es Sie wie ein Schlag trifft: Sie haben keine Erinnerung daran, wer Sie sind, wo Sie sind oder wer Ihre glorreichen Feinde sein könnten.\n\n\n1. Bah, das muss an dem bösen Salat von vor einem Monat liegen. Nichts, was ein gutes Steak nicht beheben kann.\n2. Sie durchsuchen Ihre Taschen nach etwas, das Sie identifizieren könnte, wie einem Reisepass.\n3. Sie brauchen einen Drink. Einen starken. Bestellen Sie einen Likörwein.",
+      "choices": {
+        "1": "t_d_001",
+        "2": "t_d_002",
+        "3": "pass"
+      }
+    },
+    "t_d_001": {
+      "message": "Sie verschlingen das Fleisch, zusammen mit den Pommes, den Fliegen und einem Stück Serviette. Oder war das ein Prospekt? Ist jetzt auch egal, Ihr Magen wird das schon klären.\n\nAls Sie den letzten Bissen hinunterschlucken, trifft Sie ein plötzlicher Gedanke: Haben Sie überhaupt Geld, um das Essen zu bezahlen? Sie könnten jederzeit einen Kampf anfangen und die Fäuste den endgültigen Preis entscheiden lassen. Oder Sie könnten Ihre Taschen nach etwas Wertvollem durchsuchen.\n\n\n1. Überprüfen Sie Ihre Taschen.\n\n2. Einen Kampf anzetteln.\n\n3. In Stille sitzen und darüber nachdenken, warum sich zwei wilde Gedanken hintereinander so... falsch anfühlen. Ist mit Ihrem Kopf etwas nicht in Ordnung?",
+      "choices": {
+        "1": "pass",
+        "2": "pass",
+        "3": "pass"
+      },
+      "t_d_001": {
+        "message": "Sie scannen schnell den Tisch und Ihre Umgebung, bevor Sie in den zahlreichen Taschen Ihrer abgenutzten Reisekleidung wühlen.\n\nAuf Ihrem Teller, halb versunken in geronnenen Fleischsäften, entdecken Sie ein Prospekt zum Thema Wutmanagement. Dann, in Ihren Taschen, finden Sie einen Reisepass und einen Ring… immer noch an einem abgetrennten menschlichen Finger befestigt. Es sieht ganz so aus, als hätte ihn jemand abgebissen.\n\n\nEin leises Gickern entweicht Ihrer Kehle.\n\n\n1. 'Nun, dieser arme Bastard wird mit diesem Finger niemanden mehr in die Augen stechen.'\n\n2. Das Prospekt lesen.\n\n3. Den Reisepass öffnen.\n\n4. Den Ring und den grauenhaften Finger, an dem er steckt, untersuchen.",
+        "choices": {
+          "1": "pass",
+          "2": "pass",
+          "3": "pass"
+        }
+      }
+    }
+  },
+  "start_states": {
+        "elf": "t_e_000",
+        "dwarf": "t_d_000",
+        "human": "t_h_000"
+    }
+}

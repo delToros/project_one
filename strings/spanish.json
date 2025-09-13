@@ -1,8 +1,44 @@
 {
-    "game_title": "Los Reinos Olvidados",
-    "prompt_language_select": "Elige tu idioma:\n1. Inglés\n2. Español",
-    "prompt_race_select": "Elige tu raza:\n1. Elfo\n2. Enano\n3. Humano",
-    "welcome_message_elf": "¡Bienvenido, noble Elfo! Tu aventura comienza...",
-    "welcome_message_dwarf": "Saludos, poderoso Enano. ¿Listo para la batalla?",
-    "welcome_message_human": "Hola, Humano. El mundo te espera."
+  "game_title": "Los Reinos Olvidados",
+  "prompt_language_select": "Elige tu idioma:\n1. English\n2. Spanish\n3. Russian",
+  "prompt_race_select": "Elige tu raza:\n1. Elfo\n2. Enano\n3. ???",
+  "game_states": {
+    "t_e_000": {
+      "message": "El asqueroso olor a vino barato y a vómito te despierta de golpe. No tienes memoria de quién eres, dónde estás o qué día es.\n\nAbres los ojos y ves una escena espeluznante: una comida a medio terminar, papeles esparcidos y un pequeño saco de cuero frente a ti.\n\n\n1. Tienes arcadas y vomitas por el hedor de la comida podrida.\n2. Inspeccionas el pequeño saco de cuero.\n3. Escudriñas los papeles esparcidos.\n4. Miras a tu alrededor, preguntándote qué crimen cósmico habrás cometido para merecer esto.",
+      "choices": {
+        "1": "pass",
+        "2": "pass",
+        "3": "pass"
+      }
+    },
+    "t_d_000": {
+      "message": "El empalagoso olor a comida de un día y a cerveza rancia te saca de un sueño en el que comandabas un barco de huesos, navegando por un mar de la sangre de tus enemigos.\n\nEstás mirando un trozo de carne realmente apetitoso lleno de moscas cuando te das cuenta: no recuerdas quién eres, dónde estás, ni quiénes son tus gloriosos enemigos.\n\n\n1. Bah, debe ser esa ensalada malvada que comiste hace un mes. Nada que un buen bistec no arregle.\n2. Revisa tus bolsillos en busca de algo que te identifique, como un pasaporte.\n3. Necesitas una copa. Una fuerte. Pide un vino fortificado.",
+      "choices": {
+        "1": "t_d_001",
+        "2": "t_d_002",
+        "3": "pass"
+      }
+    },
+    "t_d_001": {
+      "message": "Devoras la carne, junto con las patatas fritas, las moscas y un trozo de servilleta. ¿O era un folleto? Ahora no importa; tu estómago lo resolverá.\n\nCuando terminas el último bocado, un pensamiento salvaje te golpea: ¿Tienes dinero para pagar la comida? Siempre puedes empezar una pelea y dejar que tus puños decidan el precio final. O, podrías revisar tus bolsillos en busca de algo valioso.\n\n\n1. Revisa tus bolsillos.\n\n2. Busca una pelea.\n\n3. Siéntate en silencio y piensa por qué tener dos pensamientos salvajes seguidos se siente tan... mal. ¿Hay algo que anda mal con tu coco?",
+      "choices": {
+        "1": "pass",
+        "2": "pass",
+        "3": "pass"
+      },
+      "t_d_001": {
+        "message": "Escudriñas rápidamente la mesa y tus alrededores antes de hurgar en los numerosos bolsillos de tu ropa de viaje gastada.\n\nEn tu plato, medio hundido en jugos de carne cuajados, ves un folleto de manejo de la ira. Luego, en tus bolsillos, encuentras un pasaporte y un anillo... todavía adherido a un dedo humano amputado. Por su aspecto, alguien lo arrancó de un mordisco.\n\n\nUna risa baja se escapa de tu garganta.\n\n\n1. 'Bueno, ese pobre bastardo ya no podrá pincharle los ojos a nadie con este dedo.'\n\n2. Lee el folleto.\n\n3. Abre el pasaporte.\n\n4. Examina el anillo y el espeluznante dedo en el que está.",
+        "choices": {
+          "1": "pass",
+          "2": "pass",
+          "3": "pass"
+        }
+      }
+    }
+  },
+  "start_states": {
+        "elf": "t_e_000",
+        "dwarf": "t_d_000",
+        "human": "t_h_000"
+    }
 }

@@ -23,17 +23,29 @@ def get_text(key):
 
 def start_game_language():
     print("Choose your language:")
-    print("1. English (en)")
-    print("2. Spanish (es)")
-    print("3. Russian (es)")
+    print("1. English")
+    print("2. French")
+    print("3. German")
+    print("4. Italian")
+    print("5. Spanish")
+    print("6. Chinese")
+    print("7. Russian")
 
     lang_choice = input("> ")
     if lang_choice == '1':
         load_translations('english')
     elif lang_choice == '2':
-        load_translations('spanish')
+        load_translations('french')
     elif lang_choice == '3':
+        load_translations('german')
+    elif lang_choice == '4':
+        load_translations('italian')
+    elif lang_choice == '5':
         load_translations('spanish')
+    elif lang_choice == '6':
+        load_translations('chinese')
+    elif lang_choice == '7':
+        load_translations('russian')
     else:
         print("Invalid choice, defaulting to English.")
         load_translations('en')

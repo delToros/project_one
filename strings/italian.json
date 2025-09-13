@@ -1,0 +1,44 @@
+{
+  "game_title": "I Reami Dimenticati",
+  "prompt_language_select": "Scegli la tua lingua:\n1. English\n2. Spanish\n3. Russian",
+  "prompt_race_select": "Scegli la tua razza:\n1. Elfo\n2. Nano\n3. ???",
+  "game_states": {
+    "t_e_000": {
+      "message": "Il disgustoso odore di vino a buon mercato e vomito vi scuote, svegliandovi. Non avete alcun ricordo di chi siete, dove siete, o che giorno sia.\n\nI vostri occhi si aprono su una visione macabra: un pasto a metà, carte sparse e un piccolo sacchetto di pelle che giacciono di fronte a voi.\n\n\n1. Avete conati e vomitate per l'odore del cibo marcio.\n2. Ispezionate il piccolo sacchetto di pelle.\n3. Esaminate le carte sparse.\n4. Vi guardate intorno, chiedendovi quale crimine cosmico abbiate commesso per meritare tutto ciò.",
+      "choices": {
+        "1": "pass",
+        "2": "pass",
+        "3": "pass"
+      }
+    },
+    "t_d_000": {
+      "message": "L'odore nauseabondo di cibo vecchio e birra stantia vi riscuote da un sogno in cui comandavate una nave fatta di ossa, navigando in un mare del sangue dei vostri nemici.\n\nState fissando un pezzo di carne pieno di mosche, dall'aspetto davvero invitante, quando vi colpisce un pensiero: non avete alcun ricordo di chi siete, dove siete, o chi siano i vostri gloriosi nemici.\n\n\n1. Bah, deve essere colpa di quella maledetta insalata che avete mangiato un mese fa. Niente che una buona bistecca non possa risolvere.\n2. Controllate le vostre tasche per qualcosa che possa identificarvi, come un passaporto.\n3. Avete bisogno di bere qualcosa. Di forte. Ordinate un vino fortificato.",
+      "choices": {
+        "1": "t_d_001",
+        "2": "t_d_002",
+        "3": "pass"
+      }
+    },
+    "t_d_001": {
+      "message": "Divorate la carne, insieme alle patatine fritte, alle mosche e a un pezzo di tovagliolo. O era un volantino? Non importa ora; il vostro stomaco se ne occuperà.\n\nQuando finite l'ultimo boccone, un pensiero improvviso vi colpisce: avete i soldi per pagare questo pasto? Potreste sempre iniziare una rissa e lasciare che i vostri pugni decidano il prezzo finale. Oppure, potreste controllare le vostre tasche per qualcosa di prezioso.\n\n\n1. Controllate le vostre tasche.\n\n2. Cercate la rissa.\n\n3. Sedetevi in silenzio e pensate perché avere due pensieri così strani di fila vi sembri così... sbagliato. C'è qualcosa che non va nella vostra zucca?",
+      "choices": {
+        "1": "pass",
+        "2": "pass",
+        "3": "pass"
+      },
+      "t_d_001": {
+        "message": "Scandagliate rapidamente il tavolo e ciò che vi circonda prima di frugare nelle numerose tasche dei vostri vestiti da viaggio logori.\n\nSul vostro piatto, mezzo affogato nei succhi di carne rappresi, notate un volantino per la gestione della rabbia. Poi, nelle vostre tasche, trovate un passaporto e un anello… ancora attaccato a un dito umano reciso. A giudicare dall'aspetto, qualcuno l'ha morso e staccato.\n\n\nUna risatina sommessa vi sfugge dalla gola.\n\n\n1. 'Beh, quel povero bastardo non potrà più ficcare questo dito negli occhi di nessuno.'\n\n2. Leggete il volantino.\n\n3. Aprite il passaporto.\n\n4. Esaminate l'anello e il dito raccapricciante su cui si trova.",
+        "choices": {
+          "1": "pass",
+          "2": "pass",
+          "3": "pass"
+        }
+      }
+    }
+  },
+  "start_states": {
+        "elf": "t_e_000",
+        "dwarf": "t_d_000",
+        "human": "t_h_000"
+    }
+}
