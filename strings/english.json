@@ -16,7 +16,8 @@
       "choices": {
         "1": "t_d_001",
         "2": "t_d_002",
-        "3": "pass"
+        "3": "to_instant_test",
+        "4": "coin_toss_state"
       }
     },
     "t_d_001": {
@@ -25,20 +26,40 @@
         "1": "pass",
         "2": "pass",
         "3": "pass"
-      },
-      "t_d_001": {
-        "message": "You quickly scan the table and your surroundings before rummaging through the numerous pockets of your travel-worn clothes.\n\nOn your plate, half-sunk in congealed meat juices, you spot an anger management pamphlet. Then, in your pockets, you find a passport and a ring... still attached to a severed human finger. By the looks of it, someone bit it right off.\n\n\nA low chuckle escapes your throat.\n\n\n1. 'Well, that poor bastard won't be poking anyone's eyes out with this anymore.'\n\n2. Read the pamphlet.\n\n3. Open the passport.\n\n4. Examine the ring and the gruesome finger it's on.",
-        "choices": {
-          "1": "pass",
-          "2": "pass",
-          "3": "pass"
-        }
       }
+    },
+    "t_d_002": {
+      "message": "You quickly scan the table and your surroundings before rummaging through the numerous pockets of your travel-worn clothes.\n\nOn your plate, half-sunk in congealed meat juices, you spot an anger management pamphlet. Then, in your pockets, you find a passport and a ring... still attached to a severed human finger. By the looks of it, someone bit it right off.\n\n\nA low chuckle escapes your throat.\n\n\n1. 'Well, that poor bastard won't be poking anyone's eyes out with this anymore.'\n\n2. Read the pamphlet.\n\n3. Open the passport.\n\n4. Examine the ring and the gruesome finger it's on.",
+      "choices": {
+        "1": "pass",
+        "2": "pass",
+        "3": "pass"
+      }
+    },
+    "to_instant_test": {
+      "message": "This is 1st part of instant test. If everything works - you should see next message",
+      "instant": "the_instant_test"
+    },
+    "the_instant_test": {
+      "message": "This is next message. If you see it - everything works as it should be."
+    },
+    "coin_toss_state": {
+      "message": "This is coin toss state. It should display option A or option B",
+      "coin_toss": {
+        "A": "option_a",
+        "B": "option_b"
+      }
+    },
+    "option_a": {
+      "message": "This is option A."
+    },
+    "option_b": {
+      "message": "This is option B."
     }
   },
   "start_states": {
-        "elf": "t_e_000",
-        "dwarf": "t_d_000",
-        "human": "t_h_000"
-    }
+    "elf": "t_e_000",
+    "dwarf": "t_d_000",
+    "human": "t_h_000"
+  }
 }

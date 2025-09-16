@@ -1,9 +1,40 @@
 import json
+import random
 
 # A dictionary to hold the loaded translations
 strings = {}
 current_language = ""
 
+def validate_state(current_state):
+
+    # Check if message exists in game state
+    if current_state.get('message') is None:
+        raise Exception("It seems this state has no 'message'. It should be there.")
+
+    # Check if only one of these is in game_state choices/instant/coin_toss
+    if current_state.get('choices') is not None \
+            and current_state.get('instant') is not None \
+            and current_state.get('coin_toss') is not None:
+        raise Exception(
+            "It seems this state has 'choices', 'instant', and 'coin_toss' parameters. There should be only 1")
+    elif current_state.get('choices') is not None and current_state.get('instant') is not None:
+        raise Exception(
+            "It seems this state has 'choices' and 'instant' parameters. There should be only 1")
+    elif current_state.get('choices') is not None and current_state.get('coin_toss') is not None:
+        raise Exception(
+            "It seems this state has 'choices' and 'coin_toss' parameters. There should be only 1")
+    elif current_state.get('instant') is not None and current_state.get('coin_toss') is not None:
+        raise Exception(
+            "It seems this state has 'instant' and 'coin_toss' parameters. There should be only 1")
+
+    # TODO if choice exists at least 2 choices. If 1 - suggest changing. If None - error
+
+    # TODO if coin_toss exists - it should have both A & B
+
+
+def coin_toss():
+    choices = ['A', 'B']
+    return random.choice(choices)
 
 def load_translations(lang_code):
     """Loads the translation file for a given language code."""
@@ -67,9 +98,16 @@ def start_game_race():
 
 
 def play_game_state(inventory, game_states, key):
+    # Get new state
     current_state = game_states[key]
+
+    # Validate this state
+    validate_state(current_state)
+
+    # Display message of the state
     print(current_state['message'])
 
+    # Check inventory
     if "items" in current_state:
         if current_state['items'].get("add") is not None:
             items_to_add = current_state["items"].get("add", [])
@@ -87,19 +125,32 @@ def play_game_state(inventory, game_states, key):
                 else:
                     print(get_text("item_not_in_inventory").format(item=get_text(f"item_{item}")))
 
+    # Run The Game
     end_game = False
-
-    choices = current_state["choices"]
-
     while not end_game:
-        player_choice = input("> ")
 
-        if player_choice in current_state["choices"]:
-            next_state_key = choices[player_choice]
+        if current_state.get('choices') is not None:
+            player_choice = input("> ")
+            choices = current_state["choices"]
+
+            if player_choice in current_state["choices"]:
+                next_state_key = choices[player_choice]
+                play_game_state(inventory, game_states, next_state_key)
+                break
+            else:
+                print(get_text("No such choice. Choose from choices available in the message"))
+
+        elif current_state.get('instant') is not None:
+            next_state_key = current_state['instant']
             play_game_state(inventory, game_states, next_state_key)
             break
-        else:
-            print(get_text("No such choice. Choose from choices available in the message"))
+
+        elif current_state.get('coin_toss') is not None:
+            coin_result = coin_toss()
+            next_state_key = current_state['coin_toss'][coin_result]
+            play_game_state(inventory, game_states, next_state_key)
+            break
+
 
 
 def main_game():
