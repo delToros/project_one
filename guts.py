@@ -6,7 +6,6 @@ strings = {}
 current_language = ""
 
 def validate_state(current_state):
-
     # Check if message exists in game state
     if current_state.get('message') is None:
         raise Exception("It seems this state has no 'message'. It should be there.")
@@ -31,6 +30,12 @@ def validate_state(current_state):
 
     # TODO if coin_toss exists - it should have both A & B
 
+def check_input():
+    player_choice = input("> ")
+    while not(player_choice.isdigit() and player_choice.isprintable()):
+        #TODO add translatable string for that
+        player_choice = input("Something wrong with your input, try again, just number:")
+    return player_choice
 
 def coin_toss():
     choices = ['A', 'B']
@@ -130,7 +135,7 @@ def play_game_state(inventory, game_states, key):
     while not end_game:
 
         if current_state.get('choices') is not None:
-            player_choice = input("> ")
+            player_choice = check_input()
             choices = current_state["choices"]
 
             if player_choice in current_state["choices"]:
