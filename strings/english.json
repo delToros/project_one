@@ -17,7 +17,8 @@
         "1": "t_d_001",
         "2": "t_d_002",
         "3": "to_instant_test",
-        "4": "coin_toss_state"
+        "4": "coin_toss_state",
+        "5": "weighted_choice_test"
       }
     },
     "t_d_001": {
@@ -55,6 +56,19 @@
     },
     "option_b": {
       "message": "This is option B."
+    },
+    "weighted_choice_test": {
+      "message": "This is a test. Next message matters",
+      "weighted_choices": {
+        "2": "low_probability",
+        "98": "high_probability"
+      }
+},
+    "low_probability": {
+      "message": "low probability"
+    },
+    "high_probability": {
+      "message": "high probability"
     }
   },
   "start_states": {

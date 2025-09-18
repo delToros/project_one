@@ -25,6 +25,7 @@ def validate_state(current_state):
     elif current_state.get('instant') is not None and current_state.get('coin_toss') is not None:
         raise Exception(
             "It seems this state has 'instant' and 'coin_toss' parameters. There should be only 1")
+    # TODO update to weighted choices
 
     # TODO if choice exists at least 2 choices. If 1 - suggest changing. If None - error
 
@@ -40,6 +41,14 @@ def check_input():
 def coin_toss():
     choices = ['A', 'B']
     return random.choice(choices)
+
+def get_weighted_choice(current_state):
+    w_choices = []
+    weights = []
+    for key, value in current_state['weighted_choices'].items():
+        w_choices.append(value)
+        weights.append(int(key))
+    return random.choices(w_choices, weights=weights, k=1)[0]
 
 def load_translations(lang_code):
     """Loads the translation file for a given language code."""
@@ -155,6 +164,12 @@ def play_game_state(inventory, game_states, key):
             next_state_key = current_state['coin_toss'][coin_result]
             play_game_state(inventory, game_states, next_state_key)
             break
+
+        elif current_state.get('weighted_choices') is not None:
+            next_state_key = get_weighted_choice(current_state)
+            play_game_state(inventory, game_states, next_state_key)
+            break
+
 
 
 
